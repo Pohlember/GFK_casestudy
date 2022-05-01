@@ -3,10 +3,10 @@
 ## Table of contents
 * [General info](#general-info)
 * [EDA](#eda)
+* [Baseline-model](#Baseline-model)
 * [Heuristic-model](#Heuristic-model)
 * [Timeseries-model](#Timeseries-model)
 * [Hybrid-model](#Hybrid-model)
-* [Lineartree-model](#Lineartree-model)
 * [SARIMAX-model](#SARIMAX-model)
 
 ## General info
@@ -16,6 +16,9 @@ The code itself can be found under Gfk_Case.ipynb while the dataset is under tax
 
 ## EDA
 Initial exploration of the dataset.
+
+## Baseline-model
+Model the trend of the dataset and use that as baseline score.
 
 ## Heuristic-model
 Based on heuristics find new features with predictive power, build a baseline XGBRegressor model and evaluate feature importance in the dataset. 
@@ -28,9 +31,6 @@ seasonal elements using seasonal and fourier plots as well as find dependencies 
 Combine the previous to approaches by stacking the model output of two models:
 1) a linear regression capturing the trend of the series as well as faciliates forecasting to the future
 2) an ensemble tree-based model to incorporate interaction terms as well as handle non-linearities in the ordinal variables
-
-## Lineartree-model
-As an alternative approach, build a linear regression model for each combination of hour and weekday data using only the lag_24 data. 
 
 ## SARIMAX-model
 Lastly, explore a pure time series model building the model as a combination of autoregressive and moving average components. 
