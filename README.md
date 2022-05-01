@@ -22,6 +22,8 @@ The key features in the heuristics-driven model were the lag_1, lag_24 and rolli
 
 Future steps could include a region-specific holiday calendar variable as well as momentum-based indicators to further refine the model output.
 
+Please see below the structure of the codebase.
+
 ## EDA
 Initial exploration of the dataset.
 
